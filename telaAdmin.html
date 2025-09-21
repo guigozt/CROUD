@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Administrador</title>
+    <link rel="stylesheet" href="/1-Style/styleAdmin.css">
+</head>
+
+<body>
+    <h1>Tela de Administrador</h1>
+
+    <div class="formulario">
+        <div class="buscarContainer">
+            <label for="pesquisar"></label>
+            <input type="text" placeholder="Pesquisar usuário" id="pesquisar" name="pesquisar">
+            <button onclick="buscar()">Buscar</button>
+        </div>
+
+        <div class="subFormulario">
+            <button onclick="cadastrar()">Cadastrar</button>
+            <button onclick="atualizar()">Atualizar</button>
+            <button onclick="apagar()">Apagar</button>
+        </div>
+    </div>
+
+    <div id="tabela"></div>
+
+</body>
+</html>
