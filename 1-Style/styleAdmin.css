@@ -79,19 +79,6 @@ button:active {
     animation: fadeInUp 0.8s ease-in-out;
 }
 
-#tabela {
-    margin-top: 25px;
-    background: #fff;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    width: 80%;
-    max-width: 700px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease forwards 0.5s;
-}
-
 /* 🎬 Animações */
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -111,4 +98,64 @@ button:active {
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tabela */
+#tabela {
+    margin-top: 50px; /* 🔹 mais espaço no topo */
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 700px;
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+#tabela table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 0.95rem;
+    animation: fadeIn 0.8s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+#tabela th, #tabela td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+#tabela th {
+    background-color: #6a8c82;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* 🔹 Remove cor padrão das linhas e deixa só no hover */
+#tabela tr {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+#tabela tr:hover {
+    background-color: #d8ebe5; /* verde suave apenas no hover */
+}
+
+#tabela td {
+    color: #2f3e3b;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 🔹 Responsividade: scroll horizontal em telas pequenas */
+@media (max-width: 600px) {
+    #tabela {
+        overflow-x: auto;
+    }
+    #tabela table {
+        min-width: 500px;
+    }
 }
